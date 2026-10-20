@@ -28,6 +28,7 @@ SELECT
 FROM online_retail t
 GROUP BY DATE_TRUNC('month', "InvoiceDate"::TIMESTAMP)
 ORDER BY sales_month;
+
 <img width="322" height="275" alt="image" src="https://github.com/user-attachments/assets/0b866e74-49c7-473b-aa47-49c1be4c8401" />
 
 ### 2. Best-Selling Products (Top 10)
@@ -40,6 +41,7 @@ FROM online_retail t
 GROUP BY t."Description"
 ORDER BY total_spent DESC
 LIMIT 10;
+
 <img width="410" height="216" alt="image" src="https://github.com/user-attachments/assets/ade29385-438b-4812-a0ab-63100e2fdc4f" />
 
 ### 3. Repeat Customer Identification (top 10)
@@ -54,6 +56,7 @@ GROUP BY "CustomerID"
 HAVING COUNT(DISTINCT t."InvoiceNo") > 1
 ORDER BY count_invoiceno DESC
 LIMIT 10;
+
 <img width="337" height="214" alt="image" src="https://github.com/user-attachments/assets/6fbade05-3334-4694-9d28-ab3f0a7509b1" />
 
 ### 4. Sales and Orders by Country (top10)
@@ -67,6 +70,7 @@ FROM online_retail t
 GROUP BY "Country"
 ORDER BY total_sales DESC
 LIMIT 10;
+
 <img width="418" height="222" alt="image" src="https://github.com/user-attachments/assets/622aad50-0777-452f-8b89-9be85e2de1cf" />
 
 
